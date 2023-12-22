@@ -1,16 +1,19 @@
-import styled, { DefaultTheme } from 'styled-components/native';
+import { TextInput } from 'react-native';
+import styled, { DefaultTheme, css } from 'styled-components/native';
 
-export const Container = styled.TextInput`
-  background-color: ${({ theme }: { theme: DefaultTheme }) =>
-    theme.COLORS.GRAY_700};
-
-  color: ${({ theme }: { theme: DefaultTheme }) => theme.COLORS.WHITE};
-  font-family: ${({ theme }: { theme: DefaultTheme }) =>
-    theme.FONT_FAMILY.REGULAR};
-  font-size: ${({ theme }: { theme: DefaultTheme }) => theme.FONT_SIZE.MD}px;
+export const Container = styled(TextInput)`
+  flex: 1;
 
   min-height: 56px;
   max-height: 56px;
-  padding: 16px;
+
+  ${({ theme }: { theme: DefaultTheme }) => css`
+    color: ${theme.COLORS.WHITE};
+    background-color: ${theme.COLORS.GRAY_700};
+    font-family: ${theme.FONT_FAMILY.REGULAR};
+    font-size: ${theme.FONT_SIZE.MD}px;
+  `};
+
   border-radius: 6px;
+  padding: 16px;
 `;
