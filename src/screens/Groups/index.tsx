@@ -8,7 +8,7 @@ import { ListEmpty } from '@components/ListEmpty';
 import { Button } from '@components/Button';
 
 export default function Groups() {
-  const [groups, setGroups] = useState(['AAAAA']);
+  const [groups, setGroups] = useState(['Turma 01']);
 
   return (
     <Container>
